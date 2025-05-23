@@ -2,15 +2,7 @@
 
 This project tackles the binary classification problem of distinguishing between **dogs** and **wolves** using deep learning. We explore and compare multiple convolutional neural network architectures — from a custom-built **Simple CNN** to powerful **transfer learning models** like **ResNet50**, **EfficientNetB0**, and **MobileNetV2**.
 
-## 📁 Dataset
-
-The dataset consists of two labeled image folders:
-Dog_vs_Wolf.zip
-├── data/
-│   ├── dogs/
-│   └── wolves/
-
-Each image belongs to one of the two classes and is cleaned and resized to 150×150 pixels for training.
+---
 
 ## 🔍 Project Workflow
 
@@ -32,27 +24,43 @@ Each image belongs to one of the two classes and is cleaned and resized to 150×
 - Confusion Matrix
 - Predict random image from validation set
 
+---
+
 ## 📈 Sample Results
 
-| Model           | Best Val Accuracy | Notes                               |
-|------------------|-------------------|--------------------------------------|
-| Simple CNN       | ~78–81%           | Best accuracy overall                |
-| ResNet50         | ~57–59%           | Low accuracy with small data         |   
-| EfficientNetB0   | ~51–53%           | Would be more with more epochs       |         
-| MobileNetV2      | ~93–96%           | Slight overfits                      |
+| Model           | Best Val Accuracy | Notes                                 |
+|----------------|-------------------|----------------------------------------|
+| Simple CNN      | ~78–81%           | Solid baseline                         |
+| ResNet50        | ~57–59%           | Struggled with small data              |
+| EfficientNetB0  | ~51–53%           | Potential for improvement with epochs  |
+| MobileNetV2     | ~93–96%           | High accuracy, slight overfitting      |
+
+---
 
 ## 🖼️ Visualizations
 
-- Random image prediction with label and confidence
-- Accuracy & loss over training epochs
-- Confusion matrices for each model
+- 🔍 Random image predictions with actual and predicted labels
+- 📈 Accuracy & loss curves for training and validation
+- 📊 Confusion matrices to evaluate model performance
+
+---
 
 ## 🛠️ Tech Stack
 
 - Python
 - TensorFlow / Keras
 - Scikit-learn
-- Matplotlib, Seaborn, NumPy
+- NumPy, Matplotlib, Seaborn
 - PIL (Pillow)
 
+---
 
+## 📂 Project Structure
+
+The dataset consists of images divided into two categories — `dogs` and `wolves`. The directory structure after unzipping is:
+
+```plaintext
+Dog_vs_Wolf.zip
+├── data/
+│   ├── dogs/
+│   └── wolves/
